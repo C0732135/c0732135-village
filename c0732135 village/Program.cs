@@ -36,6 +36,7 @@ namespace c0732135_village
             toronto.villageName = "version c";
             c = toronto;
             Console.WriteLine(c.villageName);
+        toronto.nextVillage = Ajax;
         }
     }
     class Village
@@ -54,6 +55,18 @@ namespace c0732135_village
                 ajax = new Village();
             maple.villageName = "toronto";
             maple.nextVillage = toronto;
-        } }
+        }
+    public void travel()
+    {
+        Village currentVillage = maple;
+        while (!currentVillage.isAstrelide)
+        {
+            Console.WriteLine("I am in" + currentVillage);
+
+        }
+        else
+        Console.WriteLine
+    }
+}
     
 
