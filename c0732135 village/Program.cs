@@ -8,8 +8,52 @@ namespace c0732135_village
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[]args)
         {
+            (new learningExperiment()).run();
+
         }
     }
-}
+   
+        }
+    class learningExperiment
+    {
+        private Village c;
+
+        public void run()
+        {
+            Village toronto;
+            toronto = new Village();
+            Village a, b;
+            toronto.villageName = "verion A";
+            a = toronto;
+            Console.WriteLine(a.villageName);
+            toronto = new Village();
+            toronto.villageName = "version B";
+            b = toronto;
+            Console.WriteLine(b.villageName);
+            toronto = new Village();
+            toronto.villageName = "version c";
+            c = toronto;
+            Console.WriteLine(c.villageName);
+        }
+    }
+    class Village
+    {
+       public bool isAstrelide;
+      public  Village nextVillage;
+        public Village preVillage;
+        public string villageName;
+    }
+    class Countryside
+    {
+        Village toronto, maple, ajax;
+        public void run() {
+            maple = new Village();
+                toronto = new Village();
+                ajax = new Village();
+            maple.villageName = "toronto";
+            maple.nextVillage = toronto;
+        } }
+    
+
