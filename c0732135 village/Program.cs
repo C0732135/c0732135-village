@@ -36,7 +36,7 @@ namespace c0732135_village
             toronto.villageName = "version c";
             c = toronto;
             Console.WriteLine(c.villageName);
-        toronto.nextVillage = Ajax;
+       ajax.nextVillage = null;
         }
     }
     class Village
@@ -59,13 +59,15 @@ namespace c0732135_village
     public void travel()
     {
         Village currentVillage = maple;
-        while (!currentVillage.isAstrelide)
-        {
+        while (currentVillage.isAstrelide!=null) { 
+        
             Console.WriteLine("I am in" + currentVillage);
+            if (currentVillage.isAstrelide)
+                Console.WriteLine("You found Astrilde in" + currentVillage);
 
-        }
-        else
-        Console.WriteLine
+
+            else
+                currentVillage = currentVillage.nextVillage;
     }
 }
     
