@@ -48,7 +48,7 @@ namespace c0732135_village
     }
     class Countryside
     {
-        Village toronto, maple, ajax;
+    Village toronto, maple, ajax, currentVillage;
         public void run() {
             maple = new Village();
                 toronto = new Village();
@@ -58,17 +58,19 @@ namespace c0732135_village
         }
     public void travel()
     {
-        Village currentVillage = maple;
-        while (currentVillage.isAstrelide!=null) { 
-        
-            Console.WriteLine("I am in" + currentVillage);
+        currentVillage = maple;
+        while (true)
+        {
             if (currentVillage.isAstrelide)
-                Console.WriteLine("You found Astrilde in" + currentVillage);
-
-
+            { Console.WriteLine("Astrilde is in" + currentVillage.villageName);
+                Console.ReadLine();
+            }
             else
+            {
                 currentVillage = currentVillage.nextVillage;
+            }
+        }
+
     }
-}
     
 
